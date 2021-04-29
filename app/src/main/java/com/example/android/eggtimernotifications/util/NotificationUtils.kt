@@ -36,10 +36,6 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
     // Create the content intent for the notification, which launches
     // this activity
     // TODO: Step 1.11 create intent
-    val builder = NotificationCompat.Builder(
-        applicationContext,
-        applicationContext.getString(R.string.egg_notification_channel_id)
-    )
 
     // TODO: Step 1.12 create PendingIntent
 
@@ -49,12 +45,14 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
 
     // TODO: Step 1.2 get an instance of NotificationCompat.Builder
     // Build the notification
-    val builder = NotificationCompat.Builder(
-        applicationContext,
-        applicationContext.getString(R.string.egg_notification_channel_id)
-    )
+
 
     // TODO: Step 1.8 use the new 'breakfast' notification channel
+    val builder = NotificationCompat.Builder(
+        applicationContext,
+        // TODO: Step 1.8 verify the notification channel name
+        applicationContext.getString(R.string.egg_notification_channel_id)
+    )
 
     // TODO: Step 1.3 set title, text and icon to builder
         .setSmallIcon(R.drawable.cooked_egg)
